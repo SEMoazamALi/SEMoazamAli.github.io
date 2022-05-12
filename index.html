@@ -10,6 +10,8 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <title>Moazam Ali</title>
 </head>
 <body>
@@ -254,19 +256,19 @@
 
 
             <!--Service section Start-->
-            <section id="service" >
+            <section id="service" class="" >
                 <div class="container py-5">
                     <h1 class="robo-font robo-bold text-primary h1-size text-center" >My Services</h1>
                     <div class="row py-5">
 
-                        <div class="col-lg-6 col-md-4 px-1 justify-content-between">
+                        <div class="col-lg-6 col-md-4 px-1 justify-content-between pt-4">
                             <div class=" shadow-lg round py-3 px-5 text-center">
                                 <h4 class="robo-font robo-bold text-center text-primary" >Web Development</h2>
                                 <p class="robo-font text-center " style="font-size: 15px;" > Create a responsive website in HTML, CSS, Bootstrap, JavaScript, PHP, SQL, DJango, Flask </p>
                             </div>
                             
                         </div>
-                        <div class="col-lg-6 col-md-4 px-1 justify-content-between">
+                        <div class="col-lg-6 col-md-4 px-1 justify-content-between pt-4">
                             <div class=" shadow-lg round py-3 px-5 text-center">
                                 <h4 class="robo-font robo-bold text-center text-primary" >Data Analysis</h2>
                                 <p class="robo-font text-center " style="font-size: 15px;" > I'll Do Statistical Analysis, Exploratory Data Anaysis, and show in Graphical form in Python  </p>
@@ -297,10 +299,179 @@
             </section>
             <!--Services Section End-->
 
+            <!--Portfolio Section-->
+            <section id="portfolio" class="py-5" >
+                <div class="container py-5">
+                    <h1 class="robo-font robo-bold text-center h1-size text-primary">My Portfolio</h1>
+                    <p class="robo-font robo-bold text-center">it is our duty to give quality work for our clients</p>
+                    <div class="button-group" id="btn-group">
+                        <button type="button" class="active btn btn-outline-primary robo-font robo-bold filter-button " id="btn-filter"  data-filter="all"  >All</button>
+                        <button type="button" class="btn btn-outline-primary robo-font robo-bold filter-button " id="btn-filter"  data-filter="web"  >Web Development</button>
+                        <button type="button" class="btn btn-outline-primary robo-font robo-bold filter-button " id="btn-filter"  data-filter="analysis"  >Data Analysis & Visualization</button>
+                        <button type="button" class="btn btn-outline-primary robo-font robo-bold filter-button " id="btn-filter"  data-filter="ml" >Machine Learning</button>
+                        <button type="button" class="btn btn-outline-primary robo-font robo-bold filter-button " id="btn-filter"  data-filter="nlp"  >NLP</button>
+                    </div>
+                    <div class="container-fluid py-5">
+                        <div class="row">
+                            <div class=" col-lg-4 pt-3 filter web">
+                                <div class="each-item">
+                                    <img src="./portfolio/Web Login Screen.png" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Login Screen</h4>
+                                        <p class="robo-font text-center" >Login Screen Created in HTML, CSS, Bootstrap, Javascript & integrated with MySQL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter web">
+                                <div class="each-item">
+                                    <img src="./portfolio/Web Registration.png" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Registration Screen</h4>
+                                        <p class="robo-font text-center" >Registration Screen Created in HTML, CSS, Bootstrap, Javascript & integrated with MySQL Database</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter web ">
+                                <div class="each-item">
+                                    <img src="./portfolio/Web Reset Password.png" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Login Screen</h4>
+                                        <p class="robo-font text-center" >Reset Password Screen Created in HTML, CSS, Bootstrap, Javascript & integrated with MySQL Database</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class=" col-lg-4 pt-3 filter nlp ml">
+                                <div class="each-item">
+                                    <img src="./portfolio/fake news.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Fake News Detection</h4>
+                                        <p class="robo-font text-center" >Detect Fake news with NLP techniques. implement Preprocessing techniques, tfidf Vectorization <br class="robo-bold"> Model: Multinomial & Gaussian Naive Bayes  model for trainig. MNB shows higher accuracy. <br class="robo-bold">Data Source: Kaggle </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter nlp ml ">
+                                <div class="each-item">
+                                    <img src="./portfolio/covid.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Covid Vaccination Sentiment</h4>
+                                        <p class="robo-font text-center" >implement twitter Preprocessing techniques.<br class="robo-bold">Logistic Regression, SVM, GNB, MNb, Decision tree used for Training, SVM shows higher accuracy <br class="robo-bold">Data Source: twitter <br><a href="https://www.academia.edu/50885152/Covid_Vaccination_Sentiment_Analysis?sm=b" class="btn btn-primary" target="_blank">Link</a></p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter nlp ml ">
+                                <div class="each-item">
+                                    <img src="./portfolio/spam detect.png" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Spam Detection</h4>
+                                        <p class="robo-font text-center" >Spam Sms Detection using NLP.<br class="robo-bold"> Model: Random Forest, Decision Tree, SVM, GNB, MNB  models for trainig. SVM shows higher accuracy. <br class="robo-bold">Data Source: Kaggle </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter web ">
+                                <div class="each-item">
+                                    <img src="./portfolio/plant.png" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Green Plant Website</h4>
+                                        <p class="robo-font text-center" >Green Plant Created in HTML, CSS, Bootstrap, Javascript</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter web ">
+                                <div class="each-item">
+                                    <img src="./portfolio/landing page.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Landing page</h4>
+                                        <p class="robo-font text-center" >Landing page Created in HTML, CSS, Bootstrap, Javascript</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter web ">
+                                <div class="each-item">
+                                    <img src="./portfolio/watch web.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Ecommerce Watch Shop</h4>
+                                        <p class="robo-font text-center" >Ecommerce Store Created in HTML, CSS, Bootstrap, Javascript, JQuery & integrated with MySQL Database</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter analysis ">
+                                <div class="each-item">
+                                    <img src="./portfolio/dashboard.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Sales Dashboard</h4>
+                                        <p class="robo-font text-center" >Sales Dashboard Created in PowerBI with yearly monthly sales based </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter nlp ">
+                                <div class="each-item">
+                                    <img src="./portfolio/rotten1.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Rotten Tomatoes</h4>
+                                        <p class="robo-font text-center" >Detect Rotten Tomatoes with NLP. implement Preprocessing techniques, tfidf Vectorization <br class="robo-bold"> Model: Multinomial & Gaussian Naive Bayes  model for trainig. MNB shows higher accuracy. <br class="robo-bold">Data Source: Kaggle </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter analysis ">
+                                <div class="each-item">
+                                    <img src="./portfolio/sales board.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Sales Dashboard</h4>
+                                        <p class="robo-font text-center" >Sales Dashboard Created in PowerBI with yearly monthly sales based & region based and also with customer segmentation </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter analysis ">
+                                <div class="each-item">
+                                    <img src="./portfolio/sales board 2.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Sales Dashboard</h4>
+                                        <p class="robo-font text-center" >Sales Dashboard Created in PowerBI with yearly monthly sales based according to customer segmentation</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter analysis ">
+                                <div class="each-item">
+                                    <img src="./portfolio/sales dashboard.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Sales Dashboard</h4>
+                                        <p class="robo-font text-center" >Sales Dashboard Created in PowerBI with yearly sales according to province and Products</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" col-lg-4 pt-3 filter analysis nlp">
+                                <div class="each-item">
+                                    <img src="./portfolio/twitter impression.PNG" class="portfolio-img img-fluid round border " id="web" alt="">
+                                    <div class="cap1">
+                                        <h4 class="robo-font robo-bold" >Twitter impression Analysis</h4>
+                                        <p class="robo-font text-center" >Twitter impression Analysis in PowerBI by tweeted by date and day & also show how many likes, RT & replies were given</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!--End Portfolio Section-->
+
             <!--Contact Form-->
-            <section id="Contact" class="pb-5" >
+            <section id="Contact" class="pb-5 bg-img" >
                    <div class="container py-5">
-                       <h1 class="robo-font robo-bold text-primary text-center">Contact</h1>
+                       <h1 class="robo-font robo-bold text-primary h1-size text-center">Contact</h1>
                     <form>
                         <div class="row container">
                           <div class="col-lg-6">
@@ -350,5 +521,6 @@
     <script src="./typed/typed.js"></script>
     <script src="./typed/typed.min.js"></script>
     <script src="./js/index.js" ></script>
+    <script src="./js/filter_items.js"></script>
 </body>
 </html>
